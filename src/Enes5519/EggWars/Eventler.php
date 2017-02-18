@@ -37,7 +37,7 @@ class Eventler implements Listener{
         $o = $e->getPlayer();
         $m = $e->getMessage();
         $main = EggWars::getInstance();
-        $e->setCancelled();
+
         if($main->oyuncuArenadami($o->getName())){
             $renk = "";
             $is = substr($m, 0, 1);
