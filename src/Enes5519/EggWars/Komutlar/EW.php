@@ -139,7 +139,7 @@ class EW extends Command{
         $nbt->CustomName = new StringTag("CustomName", "§6EGGWars §fMarket");
         $nbt->CustomNameVisible = new ByteTag("CustomNameVisible", 1);
         $dunya->loadChunk($x >> 4, $z >> 4);
-        $koylu = Entity::createEntity("Villager", $dunya->getChunk($x >> 4, $z >> 4), $nbt);
+        $koylu = Entity::createEntity("Villager", $dunya, $nbt);
         $koylu->setProfession($pro);
         $koylu->spawnToAll();
     }
