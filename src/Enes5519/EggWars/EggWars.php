@@ -586,7 +586,7 @@ class EggWars extends PluginBase{
             new StringTag("CustomName", "§6EGGWars §fMarket")
         ]);
         $nbt->Items->setTagType(NBT::TAG_Compound); 
-        $tile = Tile::createTile("Chest", $o->getLevel()->getChunk($o->getX() >> 4, $o->getZ() >> 4), $nbt); 
+        $tile = Tile::createTile("Chest", $o->getLevel(), $nbt); 
         if($tile instanceof Chest) { 
             $config = new Config($this->getDataFolder() . "market.yml", Config::YAML); 
             $market = $config->get("Market"); 
