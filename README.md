@@ -1,7 +1,7 @@
 # Plugin coding: Enes5519
 Hi, the installation of the plugin I'm telling you now.
 
-#Note: You do not change the colors of the text on the sign. (Professionals can change)
+### Note: You do not change the colors of the text on the sign. (Professionals can change)
 
 ## EGG WARS SHOP
 ### - EggWars Shop Setup: /ew market (Villager creates.)
