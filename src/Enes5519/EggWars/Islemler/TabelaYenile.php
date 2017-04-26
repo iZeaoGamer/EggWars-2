@@ -2,6 +2,7 @@
 
 namespace Enes5519\EggWars\Islemler;
 
+use Enes5519\EggWars\EggWars;
 use pocketmine\scheduler\PluginTask;
 use pocketmine\Server;
 use pocketmine\tile\Sign;
@@ -12,7 +13,7 @@ class TabelaYenile extends PluginTask{
     
     private $p;
     public function __construct($p){
-        $this->p = $p;
+        $this->p = EggWars::getInstance();
         parent::__construct($p);
     }
 

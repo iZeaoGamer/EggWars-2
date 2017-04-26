@@ -5,6 +5,7 @@ namespace Enes5519\EggWars\Komutlar;
 use Enes5519\EggWars\EggWars;
 use pocketmine\command\Command;
 use pocketmine\command\CommandSender;
+use pocketmine\Player;
 use pocketmine\Server;
 use pocketmine\utils\Config;
 
@@ -17,6 +18,9 @@ class Hub extends Command{
 
     public function execute(CommandSender $g, $label, array $args){
         $main = EggWars::getInstance();
+        if(!$g instanceof Player){
+            return;
+        }
         if($main->oyuncuArenadami($g->getName())){
             $arena = $main->oyuncuArenadami($g->getName());
             $ac = new Config($main->getDataFolder()."Arenalar/$arena.yml", Config::YAML);

@@ -7,7 +7,7 @@ use pocketmine\event\entity\{
     EntityDamageByEntityEvent, EntityDamageEvent
 };
 use pocketmine\event\player\{
-    PlayerDeathEvent, PlayerInteractEvent, PlayerMoveEvent, PlayerChatEvent
+    PlayerDeathEvent, PlayerInteractEvent, PlayerChatEvent
 };
 use pocketmine\event\block\{
     SignChangeEvent, BlockBreakEvent, BlockPlaceEvent
@@ -17,11 +17,11 @@ use pocketmine\event\inventory\{
 };
 use pocketmine\item\Item;
 use pocketmine\event\Listener;
-use pocketmine\level\{Position, Level};
-use pocketmine\{Player, Server};
+use pocketmine\level\Position;
+use pocketmine\Player;
 use pocketmine\tile\{Sign, Chest};
 use pocketmine\block\Block;
-use pocketmine\math\{AxisAlignedBB, Vector3};
+use pocketmine\math\Vector3;
 use pocketmine\utils\Config;
 use pocketmine\inventory\{
     ChestInventory, PlayerInventory

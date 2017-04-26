@@ -28,11 +28,14 @@ class EggWars extends PluginBase{
     public $m = array();
     public $mo = array();
 
+    public function __construct(){
+        self::$ins = $this;
+    }
+
     public function onEnable(){
         @mkdir($this->getDataFolder());
         @mkdir($this->getDataFolder()."Arenalar/");
         @mkdir($this->getDataFolder()."Yedekler/");
-        self::$ins = $this;
         $this->configHazırla();
         $this->digerHazirla();
         $this->arenalariHazirla(); 
@@ -601,7 +604,7 @@ class EggWars extends PluginBase{
         }
     }
     
-    public static function yildirimOlustur($x, $y, $z, $level){
+    public static function yildirimOlustur($x, $y, $z, Level $level){
         $yildirim = new AddEntityPacket();
         $yildirim->metadata = array();
         $yildirim->type = 93;
@@ -612,6 +615,6 @@ class EggWars extends PluginBase{
         $yildirim->x = $x;
         $yildirim->y = $y;
         $yildirim->z = $z;
-        Server::broadcastPacket($level->getPlayers(), $yildirim);
+        Server::getInstance()->broadcastPacket($level->getPlayers(), $yildirim);
     }
 }

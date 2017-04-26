@@ -2,6 +2,7 @@
 
 namespace Enes5519\EggWars\Islemler;
 
+use Enes5519\EggWars\EggWars;
 use pocketmine\scheduler\PluginTask;
 use pocketmine\Server;
 use pocketmine\tile\Sign;
@@ -16,7 +17,7 @@ class Oyun extends PluginTask{
     
     private $p;
     public function __construct($p){
-        $this->p = $p;
+        $this->p = EggWars::getInstance();
         parent::__construct($p);
     }
     
@@ -113,6 +114,7 @@ class Oyun extends PluginTask{
                         $ac->set("Durum", "Bitti");
                         $ac->save();
                         $main->arenaMesaj($arena, $main->b."§aOyunu Kazandınız!");
+                        $takim = "";
                         foreach ($main->arenaOyunculari($arena) as $olar) {
                             $o = Server::getInstance()->getPlayer($olar);
                             if(!($o instanceof Player)){
@@ -133,12 +135,12 @@ class Oyun extends PluginTask{
                             if($bitis <= 1){
                                 $main->arenadanOyuncuKaldir($arena, $o->getName());
                             }
+                            if($bitis <= 0){
+                                $main->arenaYenile($arena);
+                                $o->sendPopup("§8» §eArena Yenileniyor §8«");
+                                return true;
+                            }
                             $o->sendPopup("§cArena yenilenmesine §e$bitis §csaniye kaldı.");
-                        }
-                        if($bitis <= 0){
-                            $main->arenaYenile($arena);
-                            $o->sendPopup("§8» §eArena Yenileniyor §8«");
-                            return;
                         }
                     }
                 }else{
@@ -147,6 +149,7 @@ class Oyun extends PluginTask{
                 }
             }
         }
+        return true;
     }
     
     public function turDonusItem($tur){

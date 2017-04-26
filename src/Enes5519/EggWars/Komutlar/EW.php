@@ -97,7 +97,7 @@ class EW extends Command{
                 }elseif($args[0] == "market"){
                     /*$main->mo[$g->getName()] = 0;
                     $g->sendMessage("§8» §6Market Kayıt Etmek İçin 9 Tabelaya Dokun!");*/
-                    $this->marketOlustur($g->x, $g->y, $g->z, $g->yaw, $g->pitch, $g->getLevel(), 1);
+                    $this->marketOlustur($g->x, $g->y, $g->z, $g->yaw, $g->pitch, $g->getLevel());
                 }elseif($args[0] == "baslat"){
                     if($main->oyuncuArenadami($g->getName())){
                         $arena = $main->oyuncuArenadami($g->getName());
@@ -119,7 +119,7 @@ class EW extends Command{
         }
     }
 
-    public function marketOlustur($x, $y, $z, $yaw, $pitch, Level $dunya, $pro){
+    public function marketOlustur($x, $y, $z, $yaw, $pitch, Level $dunya){
         $nbt = new CompoundTag;
         $nbt->Pos = new ListTag("Pos", [
             new DoubleTag("", $x),
@@ -134,13 +134,11 @@ class EW extends Command{
             new DoubleTag("", 0),
             new DoubleTag("", 0)
         ]);
-        $nbt->Profession = new ByteTag("Profession", $pro);
         $nbt->Health = new ShortTag("Health", 10);
         $nbt->CustomName = new StringTag("CustomName", "§6EGGWars §fMarket");
         $nbt->CustomNameVisible = new ByteTag("CustomNameVisible", 1);
         $dunya->loadChunk($x >> 4, $z >> 4);
         $koylu = Entity::createEntity("Villager", $dunya, $nbt);
-        $koylu->setProfession($pro);
         $koylu->spawnToAll();
     }
 }
