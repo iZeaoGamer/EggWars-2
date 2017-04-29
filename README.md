@@ -1,27 +1,22 @@
-# Plugin coding: Enes5519
-Hi, the installation of the plugin I'm telling you now.
+# CODE: Enes5519
+ - use with pmmp, bluelight or steadfast2 <br />
+ - **Note: You do not change the colors of the text on the sign. (Professionals can change)**
 
-### Note: You do not change the colors of the text on the sign. (Professionals can change)
+### EGG WARS SHOP
+> EggWars Shop Setup: /ew market (Villager creates.) <br />
 
-## EGG WARS SHOP
-### - EggWars Shop Setup: /ew market (Villager creates.)
+### EGG WARS GENERATOR (with Sign)
+ - <b>Iron Generator:</b> <br />
+First Line: generator <br />
+Second Line: demir <br />
+ - <b>Gold Generator:</b> <br />
+First Line: generator <br />
+Second Line: altin <br />
+Third Line: kirik **(Break Generator)** <br />
+ - <b>Diamond Generator:</b> <br />
+First Line: generator <br />
+Second Line: elmas <br />
+Third Line: kirik **(Break Generator)** <br />
 
-## EGG WARS GENERATOR
-### EggWars Generator Setup with Sign;
-
-### Iron Generator;
-#### First Line: generator
-#### Second Line: demir
-
-### Gold Generator;
-#### First Line: generator
-#### Second Line: altin
-#### Third Line: kirik (If break generator)
-
-### Diamond Generator;
-#### First Line: generator
-#### Second Line: elmas
-#### Third Line: kirik
-
-## EGG WARS TEAM EGG SETUP
-### Place the wool from the egg to the bottom of any team!
+#### EGG WARS TEAM EGG SETUP
+> Place the wool from the egg to the bottom of any team!
