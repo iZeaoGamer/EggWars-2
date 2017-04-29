@@ -1,9 +1,12 @@
 # CODE: Enes5519
- - use with pmmp, bluelight or steadfast2 <br />
- - **Note: You do not change the colors of the text on the sign. (Professionals can change)**
+- use with pmmp, bluelight or steadfast2 <br />
+ - **Note: You do not change the colors of the text on the sign. (Professionals can change)** <br />
+ 
+ ## Poggit
+ [![Poggit-CI](https://poggit.pmmp.io/ci.badge/Enes5519/EggWars/EggWars)](https://poggit.pmmp.io/ci/Enes5519/EggWars/EggWars)<br />
 
-> **(NOT-OFFICIAL) English Version: https://github.com/NL-4-DEVS/Eggwars**
-> Place the wool from the egg to the bottom of any team!
+> **(NOT-OFFICIAL) English Version: https://github.com/NL-4-DEVS/Eggwars** <br />
+> Place the wool from the egg to the bottom of any team! <br />
 > EggWars Shop Setup: /ew market (Villager creates.) <br />
 
 ### EGG WARS GENERATOR (with Sign)
